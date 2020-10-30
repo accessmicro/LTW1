@@ -1,0 +1,186 @@
+html {
+  scroll-behavior: smooth;
+}
+.header {
+  margin-bottom: 80px;
+  /* background-color: unset; */
+}
+.ntt-item {
+  width: 1170px;
+  height: 585px;
+  position: relative;
+  margin-bottom: 50px;
+  /* background-color: cyan; */
+}
+.ntt-item img {
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  filter: blur(3px);
+}
+.ntt-item .ntt-desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20rem;
+  /* background-color: cornflowerblue; */
+  z-index: 5;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  animation-name: nhipdap;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  
+}
+.ntt-item .ntt-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 10rem;
+  /* background-color: cornflowerblue; */
+  z-index: 5;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.ntt-item .ntt-detail {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  /* background-color: cornflowerblue; */
+  z-index: 5;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.ntt-item .ntt-social {
+  /* background-color: seagreen; */
+  /* width: 25%; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.ntt-item .ntt-social-item {
+  margin-right: 50px;
+}
+.ntt-item .ntt-social-item:last-child {
+  margin-right: unset;
+}
+
+.ntt-icon {
+  color: white;
+  opacity: 0.7;
+}
+.ntt-icon:hover{
+  opacity: 1;
+  animation: runglac  1s linear;
+  animation-iteration-count: infinite;
+}
+
+.ntt-item:hover .ntt-text,
+.ntt-item:hover .ntt-detail,
+.ntt-item:hover .ntt-social {
+  opacity: 1;
+}
+.ntt-item:hover .ntt-desc {
+  opacity: 0;
+  animation: xoayvong 0.5s linear;
+
+}
+.ntt-item:hover .ntt-detail {
+  animation: xuathien3 0.5s ease-in-out;
+}
+.ntt-item:hover .ntt-social {
+  animation: xuathien2 0.5s ease-in-out;
+}
+.ntt-item:hover .ntt-text {
+  animation: xuathien1 0.5s ease-in-out;
+}
+.ntt-item:hover img {
+  -webkit-filter: sepia(90%);
+}
+
+/* ////////////////////////////////////////////// */
+@keyframes xuathien1 {
+  0% {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes xuathien2 {
+  0% {
+    top: 80%;
+    left: -25%;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes xuathien3 {
+  0% {
+    top: 60%;
+    left: -25%;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes xoayvong {
+  from {
+    transform: scale(1) translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: scale(1.5) translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes runglac {
+  0% {
+    transform: translateX(-5px);
+  }
+  25% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes nhipdap {
+  from {
+    
+    transform: scale(1) translate(-50%, -50%);
+  }
+  to {
+    transform: scale(1.1) translate(-50%, -50%);
+  }

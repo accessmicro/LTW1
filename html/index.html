@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="shortcut icon" href="../html/img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <!-- link: https://animate.style/ dung de tao hieu ung chuyen dong -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />   -->
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="../css/zoom.css">
+    <link rel="stylesheet" href="../css/cardMove.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/chatbox.css">
+    <link rel="stylesheet" href="../css/listImg.css">
+    <title>ltw</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- ---------------------------HEADER---------------------- -->
+        <header class="header">
+            <div class="container header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__text">FIFA</span>football
+                </a>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="index.html" class="header__menu-link" style="color: #ffc87a">Trang chủ</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="index.html#nghiem" class="header__menu-link">Tổng quan</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="participatePeople.html" class="header__menu-link">Diễn giả</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="contact.html" class="header__menu-link">Liên hệ</a>
+                        </li>
+
+                        <li class="header__menu-item">
+                            <a href="buyTicket.html" class="header__menu-link btn btn--border btn--rounded">Mua vé</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- ++++++++++++++++++++++++++ BANNER +++++++++++++++++++++++ -->
+        <section class="banner">
+            <div class="slider">
+                <div class="slides">
+                    <!--radio buttons start-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!--radio buttons end-->
+                    <!--slide images start-->
+                    <div class="slide first">
+                        <img src="../html/img/slider1.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="../html/img/slider2.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="../html/img/slider3.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="../html/img/slider5.png" alt="">
+                    </div>
+                    <!--slide images end-->
+                    <!--automatic navigation start-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                    <!--automatic navigation end-->
+                </div>
+                <!--manual navigation start-->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+                <!--manual navigation end-->
+            </div>
+            <!--image slider end-->
+
+            <script type="text/javascript">
+                var counter = 1;
+                setInterval(function () {
+                    document.getElementById('radio' + counter).checked = true;
+                    counter++;
+                    if (counter > 4) {
+                        counter = 1;
+                    }
+                }, 5000);
+            </script>
+            <div class="container">
+                <!--image slider start-->
+
+                <h1 class="banner__heading animate__animated animate__heartBeat text-uppercase">Hội thảo về FairPlay
+                </h1>
+                <p class="banner__desc"><span
+                        style="text-transform: uppercase; font-size: 2rem;font-family: 'Poppins', sans-serif; font-weight: 700;">Thành
+                        phố Hồ Chí
+                        Minh</span>, ngày 6 tháng 11 năm 2020.</p>
+                <p class="banner__desc"><span style="font-style: italic;">Tại:</span> <span
+                        style="text-transform: uppercase; font-size: 2rem;font-family: 'Poppins', sans-serif; font-weight: 700;">Trung
+                        tâm Hội Nghị Quốc gia</span>, đường Thanh Niên, Quận 1.</p>
+                <div class="banner__buttons">
+                    <a href="#nghiem" class="btn btn--border btn--rounded">Chi tiết</a>
+                    <a href="buyTicket.html" class="btn btn--primary btn--rounded has--shadow ">Mua vé</a>
+                </div>
+            </div>
+        </section>
+        <!-- ---Text center with line---------------------------------------------------- -->
+        <div class="container">
+            <div class="line-text"><span style="font-family: 'Oswald', sans-serif;">Thời gian đếm ngược</span></div>
+        </div>
+        <!-- ------------------------------------------------------- -->
+        <!-- ----------------------Countdown Timer
+--------------------------------- -->
+        <div class="container">
+            <ul class="countdown">
+                <li class="countdown-item"><span class="countdown-number days" id="days">28</span><span
+                        class="countdown-text">days</span></li>
+                <li class="countdown-item"><span class="countdown-number hours" id="hours">10</span><span
+                        class="countdown-text">hours</span></li>
+                <li class="countdown-item"><span class="countdown-number minutes" id="minutes">40</span><span
+                        class="countdown-text">minutes</span></li>
+                <li class="countdown-item"><span class="countdown-number seconds" id="seconds">53</span><span
+                        class="countdown-text">seconds</span></li>
+            </ul>
+        </div>
+        <!-- ------------------------------------------------------- -->
+        <!-- ------------------------------------------------------- -->
+        <div class="container">
+            <div class="line-text"><span style="font-family: 'Oswald', sans-serif;">Những người thuyết trình</span>
+            </div>
+        </div>
+        <!-- ------------------------------------------------------- -->
+        <!-- ============================== CATEGORY ===================================== -->
+        <section class="category">
+            <div class="container">
+                <ul class="category__list">
+                    <li class="category__item animate__animated animate__slideInLeft">
+                        <img src="img/ntt_1.png" alt="img" class="category__image">
+                        <h3 class="category__name">Lionel Messi</h3>
+                        <a href="#" class="category__details">Xem thêm<i class="fas fa-arrow-right"></i></a>
+                    </li>
+                    <li class="category__item">
+                        <img src="img/ntt_2.png" alt="img" class="category__image">
+                        <h3 class="category__name">Cristiano Ronaldo</h3>
+                        <a href="#" class="category__details">Xem thêm<i class="fas fa-arrow-right"></i></a>
+                    </li>
+                    <li class="category__item">
+                        <img src="img/ntt_3.png" alt="img" class="category__image">
+                        <h3 class="category__name">Luis Suarez</h3>
+                        <a href="#" class="category__details">Xem thêm<i class="fas fa-arrow-right"></i></a>
+                    </li>
+                    <li class="category__item">
+                        <img src="img/ntt_4.png" alt="img" class="category__image">
+                        <h3 class="category__name">Ronaldinho</h3>
+                        <a href="#" id="nghiem" class="category__details">Xem thêm<i class="fas fa-arrow-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- ===================================FEATURE================================================ -->
+        <div class="container">
+            <div class="line-text"><span style="font-family: 'Oswald', sans-serif;">Tổng quan về hội thảo</span></div>
+        </div>
+        <section class="feature">
+            <div class="container">
+                <div class="feature__item">
+                    <div class="feature__image feature__image-1 img-hover-zoom img-hover-zoom--colorize">
+                        <img src="img/feature_1.png" alt="img">
+                    </div>
+                    <div class="feature__infor">
+                        <h3 class="feature__title">FairPlay là gì?</h3>
+                        <div class="feature__desc text-clamp--4 text-clamp">Fair Play được hiểu là một khái niệm chỉ
+                            cách chơi đẹp, công bằng của các cầu thủ trên sân. Đây cũng là một cụm từ thể hiện các giá
+                            trị cơ bản không thể thiếu đối với môn thể thao vua mà còn phù hợp trong đời sống hằng ngày
+                            của con người. Khi nhắc đến Fair Play là nhắc đến sự thi đấu công bằng, tôn trọng, tình bạn,
+                            trên tinh thần đồng đội, bình đẳng. </div>
+                        <ul class="feature-intro__list">
+                            <li class="feature-intro__item"><a href="">Báo Thể Thao - FairPlay trong bóng đá hiện
+                                    nay.</a>
+                            </li>
+                            <li class="feature-intro__item"><a href="">Báo Lao động - Hội thảo FairPlay nắm 2019.</a>
+                            </li>
+                            <li class="feature-intro__item"><a href="">Báo Thanh niên - Giáo dục FairPlay trong giới
+                                    trẻ.</a>
+                            </li>
+
+                        </ul>
+                        <div class="feature-intro__btn">
+                            <a href="#" class="btn btn--primary btn--rounded has--shadow">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature__item">
+                    <div class="feature__image-1 img-hover-zoom img-hover-zoom--colorize">
+                        <img src="img/feature_2.png" alt="img">
+                    </div>
+                    <div class="feature__infor">
+                        <h3 class="feature__title">Giá trị cơ bản của FairPlay</h3>
+                        <div class="feature__desc text-clamp text-clamp--4">Trong cuộc sống chiến thắng không phải là
+                            điều quan trọng nhất thay vào đó chiến đấu quan trọng hơn nhiều. Điều cốt lõi không phải là
+                            chiến thắng mà chính là chiến đấu tốt. Trong quá trình chiến đấu có thể khốc liệt nhưng
+                            trước tiên bạn nên tìm cho mình niềm vui khi luyện tập ở bất kì môn thể thao hay lĩnh vực
+                            nào. bạn không nên quên lối chơi của mình khi sức nóng của cuộc chiến đạt lên đỉnh điểm.
+                        </div>
+                        <ul class="feature-intro__list">
+                            <li class="feature-intro__item feature-intro__item--circle">Cạnh tranh công bằng.
+                            </li>
+                            <li class="feature-intro__item feature-intro__item--circle">Chính trực.
+                            </li>
+                            <li class="feature-intro__item feature-intro__item--circle">Tinh thần đồng đội.
+                            </li>
+                            <li class="feature-intro__item feature-intro__item--circle">Lòng khoan dung.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature__item">
+                    <div class="feature__image-1 img-hover-zoom img-hover-zoom--colorize">
+                        <img src="img/feature_3.png" alt="img">
+                    </div>
+                    <div class="feature__infor">
+                        <h3 class="feature__title">Những việc làm thiết thực giúp lan toản tinh thần FairPlay</h3>
+                        <div class="feature__desc text-clamp--2 text-clamp">Bất cứ khi nào chúng ta hành động trên tinh
+                            thần fair-play là chúng ta góp phần xây dựng một thế giới hòa bình và tốt đẹp hơn.</div>
+                        <ul class="feature-best__list">
+                            <li class="feature-best__item">
+                                <i class="feature-best__icon fas fa-gifts feature-best__icon-1"></i>
+                                <h3 class="feature-best__title">Giải thưởng tuyên dương.</h3>
+                                <p class="feature-best__desc">Giúp có thêm cho các CĐV có thêm tinh thần thi đấu công
+                                    bằng.</p>
+                            </li>
+                            <li class="feature-best__item">
+                                <i class="feature-best__icon fas fa-balance-scale feature-best__icon-2"></i>
+                                <h3 class="feature-best__title">Luật về FairPlay.</h3>
+                                <p class="feature-best__desc">Có những biện pháp nghiêm minh xử lý các hành vi thiếu
+                                    FairPlay.</p>
+                            </li>
+                            <li class="feature-best__item">
+                                <i class="feature-best__icon fas fa-birthday-cake feature-best__icon-3"></i>
+                                <h3 class="feature-best__title">Ngày FairPlay thế giới.</h3>
+                                <p class="feature-best__desc">Nên có 1 ngày kỉ niệm về nó.</p>
+                            </li>
+                            <li class="feature-best__item">
+                                <i class="feature-best__icon fas fa-book-open feature-best__icon-4"></i>
+                                <h3 class="feature-best__title">Giáo dục về FairPlay.</h3>
+                                <p class="feature-best__desc">Cần được đưa vào chương trình đào tạo của các Trung tâm
+                                    thể thao.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================================================================================================== -->
+        <section class="partner">
+            <div class="container partner__container">
+                <h2 class="partner__title">Các bên cùng tham gia</h2>
+                <ul class="partner__list">
+                    <li class="partner__item">
+                        <img src="img/thamgia1.png" alt="partner__logo" class="partner__logo" height="80px"
+                            width="auto">
+                    </li>
+                    <li class="partner__item">
+                        <img src="img/thamgia2.png" alt="partner__logo" height="80px" width="auto"
+                            class="partner__logo">
+                    </li>
+                    <li class="partner__item">
+                        <img src="img/thamgia3.png" alt="partner__logo" height="80px" width="auto"
+                            class="partner__logo">
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <!-- ============================================================================================ -->
+        <section class="connect" id="">
+            <div class="container ">
+                <h2 class="connect__title">Các hình ảnh độc quyền mà hội nghị ghi lại qua các năm.</h2>
+                <p class="connect__notice">Kết nối với <span>@FIFA</span>football</p>
+                <div class="list__img">
+                    <div class="list__img-item img1 "><img class="sizeimg12" src="img/li8.png" alt=""></div>
+                    <div class="list__img-item img2"><img src="img/li2.png" alt="" class="sizeimg21"></div>
+                    <div class="list__img-item img3"><img src="img/li3.png" alt="" class="sizeimg11"></div>
+                    <div class="list__img-item img4"><img src="img/li1.png" alt="" class="sizeimg11"></div>
+                    <div class="list__img-item img5"><img src="img/li5.png" alt="" class="sizeimg11"></div>
+                    <div class="list__img-item img6"><img src="img/li1.png" alt="" class="sizeimg12"></div>
+                    <div class="list__img-item img7"><img src="img/li7.png" alt="" class="sizeimg21"></div>
+                    <div class="list__img-item img8"><img src="img/li6.png" alt="" class="sizeimg11"></div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================================================================================== -->
+        <section class="subscribe">
+            <div class="container subscribe__container">
+                <h2 class="subscribe__title">Đăng ký để nhận các thông báo mới nhất</h2>
+                <div class="subscribe__infor">
+                    <div class="subscribe__form">
+                        <input type="text" placeholder="Nhập email của bạn" class="subscribe__input"><button
+                            class="subscribe__button">Đăng ký</button>
+                    </div>
+                    <div class="subscribe__social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =================================================================== -->
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__logo footer__children">
+                    <a href="index.html" class="logo footer__textlogo">
+                        <span class="logo__text">FIFA</span>football
+                    </a>
+                </div>
+                <div class="footer-1 footer__children">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Sự kiện dành cho đối tác</a></li>
+                        <li class="footer__item"><a href="#">Sự kiện mới</a></li>
+                        <li class="footer__item"><a href="#">Sự kiện theo ngày</a></li>
+                        <li class="footer__item"><a href="#">Trò chơi và phần thưởng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-2 footer__children">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Sự kiện</a></li>
+                        <li class="footer__item"><a href="#">Who We Are</a></li>
+                        <li class="footer__item"><a href="#">Dịch vụ</a></li>
+                        <li class="footer__item"><a href="#">Đặc trưng</a></li>
+                        <li class="footer__item"><a href="#">Xem trước</a></li>
+                    </ul>
+                </div>
+                <div class="footer-3 footer__children">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Tổ chức</a></li>
+                        <li class="footer__item"><a href="#">Liên hệ</a></li>
+                        <li class="footer__item"><a href="#">Giúp đỡ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+        <!-- ------------------------------------------------------- -->
+        <!-- <div onclick="chat()" href="" class="messenger"></div> -->
+        <button onclick="chat()" id="btn-chat"><i class="fab fa-facebook-messenger messenger"></i></button>
+
+        <div class="chat-popup" id="chat-box">
+            <form class="form-container">
+                <h1>Tư vấn khách hàng</h1>
+                <label for="msg"><b>Bất kỳ thắc mắc, xin vui lòng liên hệ:</b></label>
+                <textarea placeholder="Chat với chúng tôi.."></textarea>
+                <button type="submit" class="btn">Gửi</button>
+            </form>
+            <button type="button" class="btn-cancel" onclick="closechat()"><i class="fas fa-times"></i></button>
+        </div>
+
+        <script>        
+            function chat() {
+                $('#chat-box').css("display", "block");
+                $('#btn-chat').css("display", "none");
+            }
+            function closechat() {
+                $('#chat-box').css("display", "none");
+                $('#btn-chat').css("display", "unset");
+            }
+        </script>
+        <script src="../js/index.js"></script>
+        <script src="../bt4/js/jquery.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.category__item{
+    position: relative;
+    transition: transform .5s;
+}
+.category__item:hover{
+    background-color: rgb(255,200,122,0.3);
+    /* animation: moveCard .3s linear ; */
+    transform: translate(-5px ,-5px)
+}
+@keyframes moveCard{
+    0%{
+        left: 0;
+        top: 0;
+    }
+    
+    100%{
+        left: -10px;
+        top: -10px;
+    }
+}

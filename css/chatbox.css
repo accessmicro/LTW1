@@ -1,0 +1,86 @@
+.messenger {
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  font-size: 50px;
+  color: #ffc87a;
+  cursor: pointer;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  /* border: none; */
+  z-index: 9;
+}
+
+.form-container {
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+  background-color: rgb(255, 200, 122, 0.5);
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  resize: none;
+  min-height: 200px;
+}
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #88fd8c;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  opacity: 0.8;
+  transition: all .5s ease-in;
+}
+.form-container h1, .form-container label{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+.form-container h1{
+    text-align: center;
+    font-size: 2rem;
+}
+.form-container label b{
+    font-style: italic;
+}
+
+
+.btn-cancel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+  width: 3rem;
+  height: 3rem;
+  outline: none;
+  border: unset;
+  color: white;
+  border-radius: 50%;
+  background-color: rgb(252, 156, 156);
+  cursor: pointer;
+
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
